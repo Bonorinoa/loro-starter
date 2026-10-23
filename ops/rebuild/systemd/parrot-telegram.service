@@ -1,0 +1,15 @@
+[Unit]
+Description=Personal Parrot Telegram Bot Adapter (Fase C)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=parrot
+WorkingDirectory=/home/parrot/parrot
+EnvironmentFile=/home/parrot/parrot/.env
+ExecStart=/home/parrot/venv/bin/python /home/parrot/parrot/telegram_bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

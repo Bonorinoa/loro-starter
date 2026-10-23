@@ -1,0 +1,25 @@
+# Never commit real configuration or credentials
+.env
+.env.*
+!.env.example
+
+# Local state
+*.db
+*.sqlite
+*.sqlite3
+checkouts/
+events/
+logs/
+*.log
+
+# Model weights and audio
+*.gguf
+*.bin
+*.wav
+*.mp3
+
+# Editors / OS
+.DS_Store
+.venv/
+__pycache__/
+*.pyc

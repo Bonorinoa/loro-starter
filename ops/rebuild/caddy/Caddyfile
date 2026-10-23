@@ -1,0 +1,27 @@
+parrot.example.com {
+	handle /rtc* {
+		reverse_proxy localhost:7880
+	}
+	handle /twirp* {
+		reverse_proxy localhost:7880
+	}
+	handle /protocol* {
+		reverse_proxy localhost:7880
+	}
+	handle /worker* {
+		reverse_proxy localhost:7880
+	}
+	handle /health* {
+		reverse_proxy localhost:8081
+	}
+	handle /twilio/* {
+		reverse_proxy localhost:8090
+	}
+	handle {
+		reverse_proxy localhost:8090
+	}
+}
+
+dash.example.com {
+	reverse_proxy localhost:8090
+}

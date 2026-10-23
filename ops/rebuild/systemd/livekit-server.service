@@ -1,0 +1,16 @@
+[Unit]
+Description=LiveKit SFU server (Personal Parrot)
+After=network-online.target redis-server.service
+Wants=network-online.target
+Requires=redis-server.service
+
+[Service]
+User=parrot
+ExecStart=/usr/local/bin/livekit-server --config /home/parrot/livekit/livekit.yaml
+Restart=always
+RestartSec=3
+# OOM guard: LiveKit should never hold more than ~600MB on this 4GB box
+MemoryMax=600M
+
+[Install]
+WantedBy=multi-user.target

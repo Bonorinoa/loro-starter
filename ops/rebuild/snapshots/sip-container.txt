@@ -1,0 +1,2 @@
+image=livekit/sip:latest cmd=[] net=host restart=unless-stopped binds=[/home/parrot/livekit/sip.yaml:/sip/config.yaml] ports=map[]
+livekit/sip@sha256:eac7a15dbf8173b04ce1a59ed95f4b07da9db4ff796ab1fb86e92a499d3ee8d8 created=2026-08-21T06:31:03.883931935Z

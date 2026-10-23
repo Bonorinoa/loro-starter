@@ -1,0 +1,15 @@
+[Unit]
+Description=Personal Parrot SIP config bootstrap (self-healing after Redis wipe)
+After=livekit-server.service redis-server.service
+Wants=livekit-server.service
+
+[Service]
+Type=oneshot
+User=parrot
+EnvironmentFile=/home/parrot/parrot/.env
+WorkingDirectory=/home/parrot/parrot
+ExecStart=/home/parrot/venv/bin/python /home/parrot/parrot/sip_bootstrap.py
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

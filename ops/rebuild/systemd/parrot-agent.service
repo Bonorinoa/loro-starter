@@ -1,0 +1,15 @@
+[Unit]
+Description=Personal Parrot voice agent (sprint 2: STT+LLM+TTS)
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+User=parrot
+EnvironmentFile=/home/parrot/parrot/.env
+Environment=LIVEKIT_URL=ws://localhost:7880
+ExecStart=/home/parrot/venv/bin/python /home/parrot/parrot/parrot_agent.py start
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

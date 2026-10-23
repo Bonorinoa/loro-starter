@@ -1,0 +1,7 @@
+[Unit]
+Description=Personal Parrot nightly encrypted backup
+
+[Service]
+Type=oneshot
+User=parrot
+ExecStart=/home/parrot/parrot/backup_nightly.sh

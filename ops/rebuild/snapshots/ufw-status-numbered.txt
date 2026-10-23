@@ -1,0 +1,23 @@
+Status: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 22/tcp                     ALLOW IN    Anywhere                   # SSH
+[ 2] 80/tcp                     ALLOW IN    Anywhere                   # HTTP (Caddy ACME)
+[ 3] 443/tcp                    ALLOW IN    Anywhere                   # HTTPS / LiveKit wss
+[ 4] 7881/tcp                   ALLOW IN    Anywhere                   # LiveKit TCP fallback
+[ 5] 3478/udp                   ALLOW IN    Anywhere                   # LiveKit STUN/TURN
+[ 6] 50000:60000/udp            ALLOW IN    Anywhere                   # LiveKit RTC media
+[ 7] 5060/udp                   ALLOW IN    Anywhere                   # SIP signaling
+[ 8] 5060/tcp                   ALLOW IN    Anywhere                   # SIP signaling TCP
+[ 9] 10000:20000/udp            ALLOW IN    Anywhere                   # SIP RTP media
+[10] 22/tcp (v6)                ALLOW IN    Anywhere (v6)              # SSH
+[11] 80/tcp (v6)                ALLOW IN    Anywhere (v6)              # HTTP (Caddy ACME)
+[12] 443/tcp (v6)               ALLOW IN    Anywhere (v6)              # HTTPS / LiveKit wss
+[13] 7881/tcp (v6)              ALLOW IN    Anywhere (v6)              # LiveKit TCP fallback
+[14] 3478/udp (v6)              ALLOW IN    Anywhere (v6)              # LiveKit STUN/TURN
+[15] 50000:60000/udp (v6)       ALLOW IN    Anywhere (v6)              # LiveKit RTC media
+[16] 5060/udp (v6)              ALLOW IN    Anywhere (v6)              # SIP signaling
+[17] 5060/tcp (v6)              ALLOW IN    Anywhere (v6)              # SIP signaling TCP
+[18] 10000:20000/udp (v6)       ALLOW IN    Anywhere (v6)              # SIP RTP media
+
